@@ -33,12 +33,18 @@ Route::post('/kendaraan/store','KendaraanController@store');
 Route::get('/kendaraan/edit/{kendaraan_id}','KendaraanController@edit');
 Route::post('/kendaraan/update','KendaraanController@update');
 Route::get('/kendaraan/cari','KendaraanController@cari');
+<<<<<<< HEAD
 Route::get('/', 'DashboardController@dashboard');
 Route::get('/', 'HomeAwalController@admin');
+=======
+Route::get('/dashboard', 'DashboardController@dashboard');
+Route::get('/', 'HomeAwalController@homeawal');
+>>>>>>> 9ca41d8057366762fc91e115d537a1cf12add43a
 Route::get('/menu', 'HomeAwalController@menu');
 Route::get('/about', 'HomeAwalController@about');
 Route::get('/profile', 'HomeAwalController@profile');
 Route::get('/home', 'HomeController@index')->name('home');
+<<<<<<< HEAD
 // Route::get('/admin', function(){
 //     return view('admin');
 // })->name('adminpage');
@@ -46,3 +52,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 // Route::post('admin-login', ['as' => 'admin-login', 'uses' => 'Auth\AdminLoginController@login']);
 // Route::get('admin-register','Auth\AdminLoginController@showRegisterPage');
 // Route::post('admin-register', 'Auth\AdminLoginController@register')->name('admin.register');
+=======
+Route::get('/admin', function(){
+    return view('admin');
+})->name('adminpage');
+Route::get('admin-login','Auth\AdminLoginController@showLoginForm');
+Route::post('admin-login', ['as' => 'admin-login', 'uses' => 'Auth\AdminLoginController@login']);
+Route::get('admin-register','Auth\AdminLoginController@showRegisterPage');
+Route::post('admin-register', 'Auth\AdminLoginController@register')->name('admin.register');
+>>>>>>> 9ca41d8057366762fc91e115d537a1cf12add43a
