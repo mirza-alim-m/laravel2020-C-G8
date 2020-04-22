@@ -81,17 +81,10 @@
 </head>
 <body>
     <div id="app">
-<<<<<<< HEAD
         <nav class="navbar navbar-expand-md navbar-light bg-primary navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'EP41') }}
-=======
-        <nav class="navbar navbar-expand-md navbar-light bg-warning navbar-laravel">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Tabassam.com') }}
->>>>>>> 9ca41d8057366762fc91e115d537a1cf12add43a
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
