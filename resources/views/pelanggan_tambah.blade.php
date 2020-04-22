@@ -17,7 +17,7 @@
                         
                         <div class="form-group">
                             <label>Nama Pelanggan</label>
-                            <input name="pelanggan_nama" class="form-control" placeholder="Masukan Tarif Perhari"></input>
+                            <input type="text" name="pelanggan_nama" class="form-control" placeholder="Masukan Nama Pelanggan"></input>
  
                              @if($errors->has('pelanggan_nama'))
                                 <div class="text-danger">
@@ -29,7 +29,7 @@
 
                         <div class="form-group">
                             <label>Alamat Pelanggan</label>
-                            <input name="pelanggan_alamat" class="form-control" placeholder="Masukan Tarif Overtime"></input>
+                            <input type="text" name="pelanggan_alamat" class="form-control" placeholder="Masukan Alamat Pelanggan"></input>
  
                              @if($errors->has('pelanggan_alamat'))
                                 <div class="text-danger">
@@ -41,7 +41,7 @@
 
                         <div class="form-group">
                             <label>No Telpon Pelanggan</label>
-                            <input name="pelanggan_telpon" class="form-control" placeholder="Masukan Tarif Overtime"></input>
+                            <input type="text" name="pelanggan_telpon" class="form-control" placeholder="Masukan Nomor Telpon Pelanggan"></input>
  
                              @if($errors->has('pelanggan_telpon'))
                                 <div class="text-danger">

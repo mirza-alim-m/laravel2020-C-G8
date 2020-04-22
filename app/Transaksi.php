@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Tarif extends Model
+class Transaksi extends Model
 {
-    //
+    
 }

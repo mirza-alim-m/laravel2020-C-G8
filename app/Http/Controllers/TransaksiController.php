@@ -37,10 +37,10 @@ class TransaksiController extends Controller
 	return redirect('/transaksi');
  
          }
-public function edit($transaksi_id)
+public function edit($id)
 {
 	// mengambil data pegawai berdasarkan id yang dipilih
-	$transaksi = DB::table('ps')->where('id',$id)->get();
+	$transaksi = DB::table('ps')->where('id', $id)->get();
 	// passing data pegawai yang didapat ke view edit.blade.php
 	return view('transaksi_edit',['transaksi' => $transaksi]);
  
@@ -72,4 +72,14 @@ public function cari(Request $request)
 		return view('transaksi',['transaksi' => $transaksi]);
  
 	}
+
+public function hapus($id)
+{
+	// menghapus data pegawai berdasarkan id yang dipilih
+	DB::table('ps')->where('id',$id)->delete();
+		
+	// alihkan halaman ke halaman pegawai
+	return redirect('/sopir');
+}
+
 }

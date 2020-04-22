@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Sopir extends Model
+class Ps extends Model
 {
     //
-    protected $table = "sopir";
+    protected $table = "ps";
     
 }
