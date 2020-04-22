@@ -10,8 +10,9 @@
                     <br/>
                     <br/>
                     @foreach($transaksi as $tr)
-                    <form method="post" action="/transaksi/update">
- 
+                    <form method="post" action="/transaksi/{{$tr->transaksi_id}}">
+                    @method('put')
+
                         {{ csrf_field() }}
 
 

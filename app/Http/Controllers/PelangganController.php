@@ -21,26 +21,38 @@ class PelangganController extends Controller
  
 }
 
-public function edit($pelanggan_id)
+public function edit($id)
 {
 	// mengambil data pegawai berdasarkan id yang dipilih
-	$transaksi = DB::table('pelanggan')->where('pelanggan_id', $pelanggan_id)->get();
+	$pelanggan = DB::table('pelanggan')->where('pelanggan_id', $id)->get();
 	// passing data pegawai yang didapat ke view edit.blade.php
-	return view('pelanggan_edit',['transaksi' => $transaksi]);
+	return view('pelanggan_edit',['pelanggan' => $pelanggan]);
  
 }
 
 public function update(Request $request)
 {
 	// update data pegawai
-	DB::table('pelanggan')->where('id',$request->id)->update([
-		'id' => $request->id,
-		'ps_perhari' => $request->ps_perhari,
-        'ps_overtime' => $request->ps_overtime
+	DB::table('pelanggan')->where('pelanggan_id',$request->id)->update([
+		'pelanggan_id' => $request->id,
+		'pelanggan_nama' => $request->pelanggan_nama,
+		'pelanggan_alamat' => $request->pelanggan_alamat,
+		'pelanggan_telpon' => $request->pelanggan_telpon,
+        
 	]);
 	// alihkan halaman ke halaman pegawai
-	return redirect('/transaksi');
-} 
+	return redirect('/pelanggan');
+
+}
+
+public function hapus($id)
+{
+	// menghapus data pegawai berdasarkan id yang dipilih
+	DB::table('pelanggan')->where('pelanggan_id',$id)->delete();
+		
+	// alihkan halaman ke halaman pegawai
+	return redirect('/pelanggan');
+}
 
 public function store(Request $request)
 {

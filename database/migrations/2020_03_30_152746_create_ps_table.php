@@ -14,7 +14,7 @@ class CreatePsTable extends Migration
     public function up()
     {
         Schema::create('ps', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('transaksi_id');
             $table->string('ps_perhari');
             $table->string('ps_overtime');
             $table->timestamps();

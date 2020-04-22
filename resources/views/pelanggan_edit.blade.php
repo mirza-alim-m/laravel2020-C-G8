@@ -10,8 +10,8 @@
                     <br/>
                     <br/>
                     @foreach($pelanggan as $p)
-                    <form method="post" action="/pelanggan/update">
- 
+                    <form method="post" action="/pelanggan/{{$p->pelanggan_id}}">
+@method('put')
                         {{ csrf_field() }}
 
 

@@ -31,12 +31,12 @@
                                   <tbody>
                                   @foreach($transaksi as $tr)
 	                                	<tr>
-                                    <td>{{ $tr->id }}</td>
+                                    <td>{{ $tr->transaksi_id }}</td>
 			                              <td>{{ $tr->ps_perhari }}</td>
 			                              <td>{{ $tr->ps_overtime }}</td>
 		                                	<td>
-			                              	<a href="/transaksi/edit/{{$tr->id}}"class="btn btn-warning">Edit</a>
-			                                	<a href="/transaksi/hapus/{{ $tr->id }}" class="btn btn-danger">Hapus</a>
+			                              	<a href="/transaksi/edit/{{$tr->transaksi_id}}"class="btn btn-warning">Edit</a>
+			                                	<a href="/transaksi/hapus/{{ $tr->transaksi_id }}" class="btn btn-danger">Hapus</a>
 		                                    	</td>
 		                                      </tr>
 	                                     	@endforeach

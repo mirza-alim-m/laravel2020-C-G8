@@ -28,7 +28,7 @@ class TransaksiController extends Controller
         {
 	// insert data ke table pegawai
 	DB::table('ps')->insert([
-		'id' => $request->id,
+		'transaksi_id' => $request->transaksi_id,
 		'ps_perhari' => $request->ps_perhari,
         'ps_overtime' => $request->ps_overtime
         
@@ -40,7 +40,7 @@ class TransaksiController extends Controller
 public function edit($id)
 {
 	// mengambil data pegawai berdasarkan id yang dipilih
-	$transaksi = DB::table('ps')->where('id', $id)->get();
+	$transaksi = DB::table('ps')->where('transaksi_id', $id)->get();
 	// passing data pegawai yang didapat ke view edit.blade.php
 	return view('transaksi_edit',['transaksi' => $transaksi]);
  
@@ -49,11 +49,21 @@ public function edit($id)
 public function update(Request $request)
 {
 	// update data pegawai
-	DB::table('ps')->where('id',$request->id)->update([
-		'id' => $request->id,
+	DB::table('ps')->where('transaksi_id',$request->id)->update([
+		'transaksi_id' => $request->id,
 		'ps_perhari' => $request->ps_perhari,
         'ps_overtime' => $request->ps_overtime
 	]);
+	// alihkan halaman ke halaman pegawai
+	return redirect('/transaksi');
+}
+
+
+public function hapus($id)
+{
+	// menghapus data pegawai berdasarkan id yang dipilih
+	DB::table('ps')->where('transaksi_id',$id)->delete();
+		
 	// alihkan halaman ke halaman pegawai
 	return redirect('/transaksi');
 }
@@ -73,13 +83,5 @@ public function cari(Request $request)
  
 	}
 
-public function hapus($id)
-{
-	// menghapus data pegawai berdasarkan id yang dipilih
-	DB::table('ps')->where('id',$id)->delete();
-		
-	// alihkan halaman ke halaman pegawai
-	return redirect('/sopir');
-}
 
 }
