@@ -29,6 +29,14 @@ public function edit($id)
 	return view('pelanggan_edit',['pelanggan' => $pelanggan]);
  
 }
+public function detail($id)
+{
+
+ $pelanggan = DB::table('pelanggan')->where('pelanggan_id', $id)->get();
+ // passing data pegawai yang didapat ke view edit.blade.php
+ return view('pelanggan_detail',['pelanggan' => $pelanggan]);
+
+ }
 
 public function update(Request $request)
 {

@@ -34,12 +34,12 @@
                                   @foreach($pelanggan as $p)
                             <tr>
                                 <td>{{ $p->pelanggan_id }}</td>
-                                <td>{{ $p->pelanggan_nama }}</td>
+                                <td><a href="/pelanggan/detail/{{ $p->pelanggan_id }}">{{ $p->pelanggan_nama }}</a></td>
                                 <td>{{ $p->pelanggan_alamat }}</td>
                                 <td>{{ $p->pelanggan_telpon }}</td>
                                 <td>
                                     <a href="/pelanggan/edit/{{ $p->pelanggan_id }}" class="btn btn-warning">Edit</a>
-                                    <a href="/pelanggan/hapus/{{ $p->pelanggan_id }}" class="btn btn-danger">Hapus</a>
+                                    <a href="/pelanggan/hapus/{{ $p->pelanggan_id }}" class="btn btn-danger" onclick="return confirm('Apakah Yakin Hapus?')">Hapus</a>
                                 </td>
                             </tr>
                             @endforeach

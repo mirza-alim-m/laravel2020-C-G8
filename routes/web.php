@@ -17,6 +17,7 @@ Route::put('/pelanggan/{id}','PelangganController@update');
 Route::get('/pelanggan/edit/{id}','PelangganController@edit');
 Route::post('/pelanggan/store','PelangganController@store');
 Route::get('/pelanggan/hapus/{id}','PelangganController@hapus');
+Route::get('/pelanggan/detail/{id}','PelangganController@detail');
 Route::get('/pelanggan/cari','PelangganController@cari');
 Route::get('/tarif', 'TarifController@tarif');
 Route::get('/tarif/tambah','TarifController@tambah');
