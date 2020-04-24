@@ -23,6 +23,15 @@ class TransaksiController extends Controller
 	      return view('transaksi_tambah');
  
         }
+	 
+		public function detail($id)
+       {
+ 
+		$transaksi = DB::table('ps')->where('transaksi_id', $id)->get();
+		// passing data pegawai yang didapat ke view edit.blade.php
+		return view('transaksi_detail',['transaksi' => $transaksi]);
+ 
+        }
 
         public function store(Request $request)
         {

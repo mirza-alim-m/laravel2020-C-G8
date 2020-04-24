@@ -9,6 +9,7 @@ Route::post('/transaksi/store','TransaksiController@store');
 Route::put('/transaksi/{id}','TransaksiController@update');
 Route::get('/transaksi/edit/{id}','TransaksiController@edit');
 Route::get('/transaksi/hapus/{id}','TransaksiController@hapus');
+Route::get('/transaksi/detail/{id}','TransaksiController@detail');
 Route::get('/transaksi/cari','TransaksiController@cari');
 Route::get('/pelanggan', 'PelangganController@pelanggan');
 Route::get('/pelanggan/tambah','PelangganController@tambah');
