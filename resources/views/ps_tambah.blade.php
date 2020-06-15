@@ -3,58 +3,64 @@
 <div class="container">
             <div class="card mt-5">
                 <div class="card-header text-center">
-                    TAMBAH TARIF
+                    TAMBAH PS
                 </div>
                 <div class="card-body">
-                    <a href="/tarif" class="btn btn-primary">Kembali</a>
+                    <a href="/" class="btn btn-primary">Kembali</a>
                     <br/>
                     <br/>
-                    
-                    <form method="post" action="/tarif/store">
- 
+
+                    <form method="post" action="/ps/create" enctype="multipart/form-data">
+
                         {{ csrf_field() }}
- 
+
+
                         <div class="form-group">
-                            <label>Kendaraan ID</label>
-                            <input type="text" name="kendaraan_id" class="form-control" placeholder="Masukan Kendaraan Id">
- 
-                            @if($errors->has('kendaraan_id'))
+                            <label>Ps</label>
+                            <input name="ps_perhari" class="form-control" placeholder="Masukan Ps Perhari"></input>
+
+                             @if($errors->has('ps_perhari'))
                                 <div class="text-danger">
-                                    {{ $errors->first('kendaraan_id')}}
+                                    {{ $errors->first('ps_perhari')}}
                                 </div>
                             @endif
- 
-                        </div>
- 
-                        <div class="form-group">
-                            <label>Tarif Perhari</label>
-                            <input name="tarif_perhari" class="form-control" placeholder="Masukan Tarif Perhari"></input>
- 
-                             @if($errors->has('tarif_perhari'))
-                                <div class="text-danger">
-                                    {{ $errors->first('tarif_perhari')}}
-                                </div>
-                            @endif
- 
+
                         </div>
 
                         <div class="form-group">
-                            <label>Tarif Overtime</label>
-                            <input name="tarif_overtime" class="form-control" placeholder="Masukan Tarif Overtime"></input>
- 
-                             @if($errors->has('tarif_overtime'))
+                            <label>Ps Overtime</label>
+                            <input name="ps_overtime" class="form-control" placeholder="Masukan Ps Overtime"></input>
+
+                             @if($errors->has('ps_overtime'))
                                 <div class="text-danger">
-                                    {{ $errors->first('tarif_overtime')}}
+                                    {{ $errors->first('ps_overtime')}}
                                 </div>
                             @endif
- 
+
                         </div>
+
+
+                        <div class="form-group">
+                            <label>Foto</label>
+                            <input  name="ps_foto" class="form-control" placeholder="Masukan Tarif Overtime"></input>
+
+                             @if($errors->has('ps_foto'))
+                                <div class="text-danger">
+                                    {{ $errors->first('ps_foto')}}
+                                </div>
+                            @endif
+
+                        </div>
+
+
+
+                        
                         <div class="form-group">
                             <input type="submit" class="btn btn-success" value="Simpan">
                         </div>
- 
+
                     </form>
- 
+
                 </div>
             </div>
         </div>
