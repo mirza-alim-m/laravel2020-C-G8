@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Database\Seeder;
+<<<<<<< HEAD
 use Faker\Factory as Faker;
+=======
+>>>>>>> e6aae48f6e7efde89297a4454b653da489d9495b
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,6 +16,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
+<<<<<<< HEAD
         $this->call(PsTableSeeder::class);
 
         $faker = Faker::create('id_ID');
@@ -28,5 +32,7 @@ class DatabaseSeeder extends Seeder
  
         }
 
+=======
+>>>>>>> e6aae48f6e7efde89297a4454b653da489d9495b
     }
 }

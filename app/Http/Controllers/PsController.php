@@ -11,7 +11,11 @@ class PsController extends Controller
        {
 
         $data_ps = \App\Ps::paginate(10);
+<<<<<<< HEAD
         return view('/ps',['data_ps' => $data_ps]);
+=======
+        return view('ps',['data_ps' => $data_ps]);
+>>>>>>> e6aae48f6e7efde89297a4454b653da489d9495b
 
        }
 

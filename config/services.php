@@ -30,12 +30,15 @@ return [
         'region' => env('AWS_REGION', 'us-east-1'),
     ],
 
+<<<<<<< HEAD
     'facebook' => [
         'client_id' => env('FACEBOOK_CLIENT_ID'),
         'client_secret' => env('FACEBOOK_CLIENT_SECRET'),
         'redirect' => env('FACEBOOK_CLIENT_REDIRECT')
     ],
 
+=======
+>>>>>>> e6aae48f6e7efde89297a4454b653da489d9495b
     'sparkpost' => [
         'secret' => env('SPARKPOST_SECRET'),
     ],

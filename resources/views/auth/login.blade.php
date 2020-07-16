@@ -5,10 +5,15 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
+<<<<<<< HEAD
                 <div class="card-header bg-warning login100-form-title">{{ __('Login') }}</div>
                 <br>
                 <br>
                 <br>
+=======
+                <div class="card-header">{{ __('Login') }}</div>
+
+>>>>>>> e6aae48f6e7efde89297a4454b653da489d9495b
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
@@ -66,6 +71,7 @@
                                 @endif
                             </div>
                         </div>
+<<<<<<< HEAD
                         <div class="form-group row mb-0">
                             <div class="col-md-12">
                                 <a href="{{url('auth/facebook')}}" class="btn btn-facebook">
@@ -78,6 +84,10 @@
                     </form>
                 </div>
                 <div class="card-footer bg-warning"></div>
+=======
+                    </form>
+                </div>
+>>>>>>> e6aae48f6e7efde89297a4454b653da489d9495b
             </div>
         </div>
     </div>

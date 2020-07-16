@@ -5,10 +5,14 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
+<<<<<<< HEAD
                 <div class="card-header bg-warning login100-form-title">{{ __('Register') }}</div>
                 <br>
                 <br>
                 <br>
+=======
+                <div class="card-header">{{ __('Register') }}</div>
+>>>>>>> e6aae48f6e7efde89297a4454b653da489d9495b
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -71,6 +75,7 @@
                                 </button>
                             </div>
                         </div>
+<<<<<<< HEAD
                         <br>
                         <div class="form-group row mb-0">
                         <div class="col-md-12">
@@ -84,6 +89,10 @@
                     </form>
                 </div>
                 <div class="card-footer bg-warning"></div>
+=======
+                    </form>
+                </div>
+>>>>>>> e6aae48f6e7efde89297a4454b653da489d9495b
             </div>
         </div>
     </div>
