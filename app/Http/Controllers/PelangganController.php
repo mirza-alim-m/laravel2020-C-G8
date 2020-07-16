@@ -127,15 +127,15 @@ class PelangganController extends Controller
 
        public function delete($id)
        {
-       $pelanggan = \App\Pelanggan::find($id);
-       $pelanggan->delete($pelanggan);
-       return redirect('/pelanggan');
+         $pelanggan = \App\Pelanggan::find($id);
+         $pelanggan->delete($pelanggan);
+         return redirect('/pelanggan');
        }
 
        public function detail($id)
        {
-           $pelanggan = Pelanggan::find($id);
-           return view('pelanggan_detail', compact('pelanggan'));
+         $pelanggan = Pelanggan::find($id);
+         return view('pelanggan_detail', compact('pelanggan'));
        }
 
 }

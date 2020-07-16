@@ -2,8 +2,6 @@
 
 return [
 
-<<<<<<< HEAD
-=======
     /*
     |--------------------------------------------------------------------------
     | Authentication Defaults
@@ -15,14 +13,11 @@ return [
     |
     */
 
->>>>>>> e6aae48f6e7efde89297a4454b653da489d9495b
     'defaults' => [
         'guard' => 'web',
         'passwords' => 'users',
     ],
 
-<<<<<<< HEAD
-=======
     /*
     |--------------------------------------------------------------------------
     | Authentication Guards
@@ -40,7 +35,6 @@ return [
     |
     */
 
->>>>>>> e6aae48f6e7efde89297a4454b653da489d9495b
     'guards' => [
         'web' => [
             'driver' => 'session',
@@ -50,16 +44,10 @@ return [
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
-<<<<<<< HEAD
         ],
         'admin' => [
             'driver' => 'session',
             'provider' => 'admins',
-        ],
-    ],
-
-=======
-            'hash' => false,
         ],
     ],
 
@@ -80,28 +68,22 @@ return [
     |
     */
 
->>>>>>> e6aae48f6e7efde89297a4454b653da489d9495b
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
         ],
 
-<<<<<<< HEAD
         'admins' => [
             'driver' => 'eloquent',
             'model' => App\Admin::class,
         ],
-=======
->>>>>>> e6aae48f6e7efde89297a4454b653da489d9495b
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
     ],
 
-<<<<<<< HEAD
-=======
     /*
     |--------------------------------------------------------------------------
     | Resetting Passwords
@@ -117,14 +99,12 @@ return [
     |
     */
 
->>>>>>> e6aae48f6e7efde89297a4454b653da489d9495b
     'passwords' => [
         'users' => [
             'provider' => 'users',
             'table' => 'password_resets',
             'expire' => 60,
         ],
-<<<<<<< HEAD
         'admins' => [
             'provider' => 'admins',
             'table' => 'password_reset',
@@ -132,9 +112,4 @@ return [
         ],
     ],
 
-
-=======
-    ],
-
->>>>>>> e6aae48f6e7efde89297a4454b653da489d9495b
 ];

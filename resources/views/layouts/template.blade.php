@@ -54,33 +54,18 @@
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
                             <img src="../../assets/images/logo-icon.png" alt="homepage" class="light-logo" />
-<<<<<<< HEAD
-
-=======
-                           
->>>>>>> e6aae48f6e7efde89297a4454b653da489d9495b
                         </b>
                         <!--End Logo icon -->
                          <!-- Logo text -->
                         <span class="logo-text">
                              <!-- dark Logo text -->
                              <img src="../../assets/images/logo-text.png" alt="homepage" class="light-logo" />
-<<<<<<< HEAD
-
-=======
-                            
->>>>>>> e6aae48f6e7efde89297a4454b653da489d9495b
                         </span>
                         <!-- Logo icon -->
                         <!-- <b class="logo-icon"> -->
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
                             <!-- <img src="../../assets/images/logo-text.png" alt="homepage" class="light-logo" /> -->
-<<<<<<< HEAD
-
-=======
-                            
->>>>>>> e6aae48f6e7efde89297a4454b653da489d9495b
                         <!-- </b> -->
                         <!--End Logo icon -->
                     </a>
@@ -104,11 +89,6 @@
                         <!-- ============================================================== -->
                         <!-- create new -->
                         <!-- ============================================================== -->
-<<<<<<< HEAD
-
-=======
-                        
->>>>>>> e6aae48f6e7efde89297a4454b653da489d9495b
                         <!-- ============================================================== -->
                         <!-- Search -->
                         <!-- ============================================================== -->
@@ -125,11 +105,6 @@
                         <!-- ============================================================== -->
                         <!-- Comment -->
                         <!-- ============================================================== -->
-<<<<<<< HEAD
-
-=======
-                        
->>>>>>> e6aae48f6e7efde89297a4454b653da489d9495b
                         <!-- ============================================================== -->
                         <!-- End Comment -->
                         <!-- ============================================================== -->
@@ -148,13 +123,10 @@
                                                 <div class="d-flex no-block align-items-center p-10">
                                                     <span class="btn btn-success btn-circle"><i class="ti-calendar"></i></span>
                                                     <div class="m-l-10">
-<<<<<<< HEAD
                                                         <h5 class="m-b-0">Event today</h5>
                                                         <span class="mail-desc">Just a reminder that event</span>
-=======
                                                         <h5 class="m-b-0">Event today</h5> 
                                                         <span class="mail-desc">Just a reminder that event</span> 
->>>>>>> e6aae48f6e7efde89297a4454b653da489d9495b
                                                     </div>
                                                 </div>
                                             </a>
@@ -163,13 +135,10 @@
                                                 <div class="d-flex no-block align-items-center p-10">
                                                     <span class="btn btn-info btn-circle"><i class="ti-settings"></i></span>
                                                     <div class="m-l-10">
-<<<<<<< HEAD
                                                         <h5 class="m-b-0">Settings</h5>
                                                         <span class="mail-desc">You can customize this template</span>
-=======
                                                         <h5 class="m-b-0">Settings</h5> 
                                                         <span class="mail-desc">You can customize this template</span> 
->>>>>>> e6aae48f6e7efde89297a4454b653da489d9495b
                                                     </div>
                                                 </div>
                                             </a>
@@ -178,13 +147,10 @@
                                                 <div class="d-flex no-block align-items-center p-10">
                                                     <span class="btn btn-primary btn-circle"><i class="ti-user"></i></span>
                                                     <div class="m-l-10">
-<<<<<<< HEAD
                                                         <h5 class="m-b-0">Pavan kumar</h5>
                                                         <span class="mail-desc">Just see the my admin!</span>
-=======
                                                         <h5 class="m-b-0">Pavan kumar</h5> 
                                                         <span class="mail-desc">Just see the my admin!</span> 
->>>>>>> e6aae48f6e7efde89297a4454b653da489d9495b
                                                     </div>
                                                 </div>
                                             </a>
@@ -193,13 +159,10 @@
                                                 <div class="d-flex no-block align-items-center p-10">
                                                     <span class="btn btn-danger btn-circle"><i class="fa fa-link"></i></span>
                                                     <div class="m-l-10">
-<<<<<<< HEAD
                                                         <h5 class="m-b-0">Luanch Admin</h5>
                                                         <span class="mail-desc">Just see the my new admin!</span>
-=======
                                                         <h5 class="m-b-0">Luanch Admin</h5> 
                                                         <span class="mail-desc">Just see the my new admin!</span> 
->>>>>>> e6aae48f6e7efde89297a4454b653da489d9495b
                                                     </div>
                                                 </div>
                                             </a>
@@ -253,11 +216,7 @@
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url('/sopir')}}" aria-expanded="false"><i class="mdi mdi-blur-linear"></i><span class="hide-menu">Sopir</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url('/tarif')}}" aria-expanded="false"><i class="mdi mdi-blur-linear"></i><span class="hide-menu">Tarif</span></a></li> -->
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url('/pelanggan')}}" aria-expanded="false"><i class="mdi mdi-blur-linear"></i><span class="hide-menu">Pelanggan</span></a></li>
-<<<<<<< HEAD
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url('/ps')}}" aria-expanded="false"><i class="mdi mdi-blur-linear"></i><span class="hide-menu">PS</span></a></li>
-=======
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url('/transaksi')}}" aria-expanded="false"><i class="mdi mdi-blur-linear"></i><span class="hide-menu">PS</span></a></li>
->>>>>>> e6aae48f6e7efde89297a4454b653da489d9495b
                     </ul>
                 </nav>
                 <!-- End Sidebar navigation -->
@@ -318,11 +277,6 @@
                             </div>
                         </div>
                     </div>
-<<<<<<< HEAD
-
-=======
-                     
->>>>>>> e6aae48f6e7efde89297a4454b653da489d9495b
                     <!-- Column -->
                     <!-- Column -->
                     <div class="col-md-6 col-lg-4 col-xlg-3">
@@ -360,49 +314,27 @@
                             </div>
                         </div>
                     </div>
-<<<<<<< HEAD
-
-=======
-                    
->>>>>>> e6aae48f6e7efde89297a4454b653da489d9495b
                 </div>
                 @yield('container')
                 <!-- ============================================================== -->
                 <!-- Sales chart -->
                 <!-- ============================================================== -->
-<<<<<<< HEAD
-
-
-
-=======
-                
-                                        
-            
->>>>>>> e6aae48f6e7efde89297a4454b653da489d9495b
             <!-- ============================================================== -->
             <!-- End footer -->
             <!-- ============================================================== -->
         </div>
-<<<<<<< HEAD
 
         <!-- ============================================================== -->
         <!-- End Page wrapper  -->
-
-=======
-    
         <!-- ============================================================== -->
-        <!-- End Page wrapper  -->
-        
->>>>>>> e6aae48f6e7efde89297a4454b653da489d9495b
+        <!-- End Page wrapper  -->        
         <!-- ============================================================== -->
     </div>
     <br>
     <br>
     <br>
     <br>
-    <footer class="footer text-center">
-                All Rights Reserved by Matrix-admin. Designed and Developed by <a href="https://wrappixel.com">WrapPixel</a>.
-            </footer>
+    <footer class="footer text-center">All Rights Reserved by Matrix-admin. Designed and Developed by <a href="https://wrappixel.com">WrapPixel</a></footer>
     <!-- ============================================================== -->
     <!-- End Wrapper -->
     <!-- ============================================================== -->
@@ -435,8 +367,4 @@
 
 </body>
 
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> e6aae48f6e7efde89297a4454b653da489d9495b
