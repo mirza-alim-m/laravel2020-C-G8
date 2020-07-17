@@ -8,7 +8,7 @@ class Ps extends Model
 {
     //
     protected $table = "ps";
-    protected $fillable = ['id','ps_perhari','ps_overtime','ps_foto'];
+    protected $fillable = ['ps_perhari','ps_overtime','ps_foto','ps_pdf'];
 
 
 

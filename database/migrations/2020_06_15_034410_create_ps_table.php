@@ -17,8 +17,8 @@ class CreatePsTable extends Migration
             $table->bigIncrements('id');
             $table->string('ps_perhari');
             $table->string('ps_overtime');
-           
             $table->string('ps_foto')->nullable();
+            $table->string('ps_pdf')->nullable();
             $table->timestamps();
         });
     }

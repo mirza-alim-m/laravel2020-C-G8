@@ -39,10 +39,9 @@
 
                         </div>
 
-
                         <div class="form-group">
                             <label>Foto</label>
-                            <input  name="ps_foto" class="form-control" placeholder="Masukan Tarif Overtime"></input>
+                            <input type="file" name="ps_foto" class="form-control"></input>
 
                              @if($errors->has('ps_foto'))
                                 <div class="text-danger">
@@ -52,8 +51,17 @@
 
                         </div>
 
+                        <div class="form-group">
+                            <label>PDF</label>
+                            <input type="file" name="ps_pdf" class="form-control"></input>
 
+                             @if($errors->has('ps_pdf'))
+                                <div class="text-danger">
+                                    {{ $errors->first('ps_pdf')}}
+                                </div>
+                            @endif
 
+                        </div>
                         
                         <div class="form-group">
                             <input type="submit" class="btn btn-success" value="Simpan">

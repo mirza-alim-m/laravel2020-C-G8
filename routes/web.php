@@ -36,7 +36,6 @@ Route::post('/pelanggan/{id}/update','PelangganController@update');
 Route::get('/pelanggan/{id}/delete','PelangganController@delete');
 Route::get('/pelanggan/cari','PelangganController@cari');
 
-Route::get('/ps','PsController@ps');
 // Route::get('/pelanggan', 'PelangganController@pelanggan');
 // Route::get('/pelanggan/tambah','PelangganController@tambah');
 // Route::put('/pelanggan/{id}','PelangganController@update');
@@ -46,13 +45,13 @@ Route::get('/ps','PsController@ps');
 // Route::get('/pelanggan/detail/{id}','PelangganController@detail');
 // Route::get('/pelanggan/cari','PelangganController@cari');
 
-Route::get('/', 'PsController@ps');
+Route::get('/ps', 'PsController@ps');
+Route::get('/ps/{id}/detail','PsController@detail');
 Route::get('/ps/tambah','PsController@tambah');
 Route::post('/ps/create','PsController@create');
 Route::get('/ps/{id}/edit','PsController@edit');
 Route::post('/ps/{id}/update','PsController@update');
 Route::get('/ps/{id}/delete','PsController@delete');
-Route::get('/ps/{id}/delete','PsController@hapus');
 Route::get('/ps/cari','PsController@cari');
 
 // Route::get('/sopir', 'SopirController@sopir');
@@ -82,6 +81,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin', function(){
     return view('admin');
 })->name('adminpage');
+
 Route::get('admin-login','Auth\AdminLoginController@showLoginForm');
 Route::post('admin-login', ['as' => 'admin-login', 'uses' => 'Auth\AdminLoginController@login']);
 Route::get('admin-register','Auth\AdminLoginController@showRegisterPage');
@@ -93,3 +93,10 @@ Route::post('admin-register', 'Auth\AdminLoginController@register')->name('admin
 // Route::get('/about', 'HomeAwalController@about');
 // Route::get('/profile', 'HomeAwalController@profile');
 // Route::get('/home', 'HomeController@index')->name('home');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -23,28 +23,23 @@
                             <table class="table">
                                   <thead class="thead-dark">
                                   <tr>
-                                      <th scope="col">Ps ID</th>
-                                      <th scope="col">Ps Perhari</th>
-                                      <th scope="col">Ps Overtime</th>
-                                      <th scope="col">Foto</th>
-                                      <th scope="col">Opsi</th>
-                                    </tr>
+                                    <th scope="col">Ps Perhari</th>
+                                    <th scope="col">Ps Overtime</th>
+                                    <th scope="col">Opsi</th>
+                                  </tr>
                                   </thead>
                                   <tbody>
                                   @foreach($data_ps as $ps)
-		                               <tr>
-			                               <td>{{ $ps->id }}</td>
+		                              <tr>
 			                               <td>{{ $ps->ps_perhari }}</td>
-			                              <td>{{ $ps->ps_overtime }}</td>
-
-                                    <td><img src="{{ asset('images/'.$ps->ps_foto)  }}" style="max-height:100px;max-width:100px;margin-top:10px;"></td>
-
-			                              <td>
-				                            <a href="/ps/{{ $ps->id }}/edit" class="btn btn-warning">Edit</a>
-				                           <a href="/ps/{{ $ps->id }}/delete" class="btn btn-danger">Hapus</a>
-			                              </td>
-		                               </tr>
-		                                @endforeach
+			                               <td>{{ $ps->ps_overtime }}</td>
+			                               <td>
+                                        <a href="/ps/{{ $ps->id }}/detail" class="btn btn-primary">Detail</a>
+    				                            <a href="/ps/{{ $ps->id }}/edit" class="btn btn-warning">Edit</a>
+    				                            <a href="/ps/{{ $ps->id }}/delete" class="btn btn-danger">Hapus</a>
+			                               </td>
+		                              </tr>
+		                              @endforeach
 
                                   </tbody>
                             </table>
