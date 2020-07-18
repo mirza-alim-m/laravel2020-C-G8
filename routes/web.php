@@ -77,9 +77,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('auth/{provider}', 'Auth\SocialiteController@redirectToProvider');
 Route::get('auth/{provider}/callback', 'Auth\SocialiteController@handleProviderCallback');
 
-Route::get('/admin', function(){
-    return view('admin');
-})->name('adminpage');
+Route::get('/admin', 'HomeController@indexAdmin')->name('admin');
 
 Route::get('admin-login','Auth\AdminLoginController@showLoginForm');
 Route::post('admin-login', ['as' => 'admin-login', 'uses' => 'Auth\AdminLoginController@login']);

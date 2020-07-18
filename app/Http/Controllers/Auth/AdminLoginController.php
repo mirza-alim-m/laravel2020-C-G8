@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class AdminLoginController extends Controller
@@ -13,7 +14,7 @@ class AdminLoginController extends Controller
 
     protected $guard = 'admin';
 
-    protected $redirectTo = '/home';
+    protected $redirectToAdmin = RouteServiceProvider::ADMIN;
 
     public function __construct()
     {
@@ -42,6 +43,7 @@ class AdminLoginController extends Controller
             'email' => 'required|string|email|max:255|unique:admins',
             'password' => 'required|string|min:6|confirmed'
         ]);
+
         Admin::create([
             'name' => $request->name,
             'email' => $request->email,
@@ -54,7 +56,7 @@ class AdminLoginController extends Controller
     public function login(Request $request)
     {
         if (auth()->guard('admin')->attempt(['email' => $request->email, 'password' => $request->password ])) {
-            return redirect()->route('adminpage');
+            return redirect()->route('admin');
         }
 
 

@@ -216,7 +216,16 @@
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url('/sopir')}}" aria-expanded="false"><i class="mdi mdi-blur-linear"></i><span class="hide-menu">Sopir</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url('/tarif')}}" aria-expanded="false"><i class="mdi mdi-blur-linear"></i><span class="hide-menu">Tarif</span></a></li> -->
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url('/pelanggan')}}" aria-expanded="false"><i class="mdi mdi-blur-linear"></i><span class="hide-menu">Pelanggan</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url('/ps')}}" aria-expanded="false"><i class="mdi mdi-blur-linear"></i><span class="hide-menu">PS</span></a></li>
+                        <li class="sidebar-item"><a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url('/ps')}}" aria-expanded="false"><i class="mdi mdi-blur-linear"></i><span class="hide-menu">PS</span></a></li>
+                        <li class="sidebar-item">
+                            <form action="{{route('logout')}}" method="post">
+                            @csrf
+                                <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('logout') }}" aria-expanded="false"  data-toggle="modal" data-target="#logoutModal"><i class="mdi mdi-blur-linear"></i><span class="hide-menu">Logout</span></a>
+                            </form>
+                        </li>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
                     </ul>
                 </nav>
                 <!-- End Sidebar navigation -->
@@ -246,6 +255,30 @@
                             </nav>
                         </div>
                     </div>
+                </div>
+            </div>
+            <!-- Logout Modal-->
+            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                      <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      Select "Logout" below if you are ready to end your current session.
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                      <form action="/logout" method="post">
+                        @csrf
+                        <button type="submit" class="btn btn-primary">Logout</button>
+                      </form>
+                    </div>
+                  </div>
                 </div>
             </div>
             <!-- ============================================================== -->
