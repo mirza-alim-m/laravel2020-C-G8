@@ -226,6 +226,7 @@
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ url('/change-password')}}" aria-expanded="false"><i class="mdi mdi-blur-linear"></i><span class="hide-menu">Change Password</span></a></li>
                     </ul>
                 </nav>
                 <!-- End Sidebar navigation -->

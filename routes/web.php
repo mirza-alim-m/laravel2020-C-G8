@@ -74,8 +74,9 @@ Route::get('/menu', 'HomeAwalController@menu');
 Route::get('/about', 'HomeAwalController@about');
 Route::get('/profile', 'HomeAwalController@profile');
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('auth/{provider}', 'Auth\SocialiteController@redirectToProvider');
-Route::get('auth/{provider}/callback', 'Auth\SocialiteController@handleProviderCallback');
+
+Route::get('auth/{provider}', 'Auth\AuthController@redirectToProvider');
+Route::get('auth/{provider}/callback', 'Auth\AuthController@handleProviderCallback');
 
 Route::get('/admin', 'HomeController@indexAdmin')->name('admin');
 
@@ -90,3 +91,6 @@ Route::post('admin-register', 'Auth\AdminLoginController@register')->name('admin
 // Route::get('/about', 'HomeAwalController@about');
 // Route::get('/profile', 'HomeAwalController@profile');
 // Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('change-password', 'ChangePasswordController@index');
+Route::post('change-password', 'ChangePasswordController@store')->name('change.password');
