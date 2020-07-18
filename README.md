@@ -1,7 +1,11 @@
+Faisal Syahrul Afwan (17090062)
+
+Nur Afif Fadlulloh (17090054)
+
 Langkah instalasi :
 
-  1. git clone "https://github.com/mirza-alim-m/laravel2020-D-G4.git"
-  2. cd laravel2020-D-G4
+  1. git clone "https://github.com/mirza-alim-m/laravel2020-C-G8.git"
+  2. cd laravel2020-C-G8
   3. composer update
   4. copy file .env-example lalu paste dengan nama .env
   5. php artisan key:generate
