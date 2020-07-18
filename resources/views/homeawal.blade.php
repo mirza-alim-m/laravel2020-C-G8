@@ -26,7 +26,7 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-<h1 class=" text-warning"><marquee>WELCOME TO EP41.COM RENTAL MOBIL</marquee></h1>
+<h1 class=" text-dark"><marquee>WELCOME TO AFFISAL.COM RENTAL PLAY STATION</marquee></h1>
 <div class="container">
 
   <div class="row">
