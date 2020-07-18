@@ -77,7 +77,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('auth/{provider}', 'Auth\SocialiteController@redirectToProvider');
 Route::get('auth/{provider}/callback', 'Auth\SocialiteController@handleProviderCallback');
 
-Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin', function(){
     return view('admin');
 })->name('adminpage');
@@ -93,10 +92,3 @@ Route::post('admin-register', 'Auth\AdminLoginController@register')->name('admin
 // Route::get('/about', 'HomeAwalController@about');
 // Route::get('/profile', 'HomeAwalController@profile');
 // Route::get('/home', 'HomeController@index')->name('home');
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
