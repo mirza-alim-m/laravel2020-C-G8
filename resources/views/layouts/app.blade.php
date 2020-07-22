@@ -94,15 +94,15 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
-                        <li class="nav-item active">
+                        <!-- <li class="nav-item active">
                           <a class="nav-link" href="{{url('/')}}">Home</a>
-                        </li>
-                        <a class="nav-link active" href="{{url('/menu')}}">Menu</a>
+                        </li> -->
+                        <!-- <a class="nav-link active" href="{{url('/menu')}}">Menu</a>
                         </li>
                         <a class="nav-link active" href="{{url('/about')}}">About</a>
                         </li>
                         <a class="nav-link active" href="{{url('/profile')}}">Profile</a>
-                        </li>
+                        </li> -->
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link active" href="{{ route('login') }}">{{ __('Login') }}</a>
