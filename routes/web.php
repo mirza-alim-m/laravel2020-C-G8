@@ -18,41 +18,50 @@ Route::get('/', function () {
 Auth::routes();
 Auth::routes(['verify' => true]);
 
-// Route::get('/transaksi', 'TransaksiController@transaksi');
-// Route::get('/transaksi/tambah','TransaksiController@tambah');
-// Route::post('/transaksi/store','TransaksiController@store');
-// Route::put('/transaksi/{id}','TransaksiController@update');
-// Route::get('/transaksi/edit/{id}','TransaksiController@edit');
-// Route::get('/transaksi/hapus/{id}','TransaksiController@hapus');
-// Route::get('/transaksi/detail/{id}','TransaksiController@detail');
-// Route::get('/transaksi/cari','TransaksiController@cari');
+Route::group(['middleware' => 'auth','middleware'=>'verified'], function () {
 
-Route::get('/pelanggan','PelangganController@pelanggan');
-Route::get('/pelanggan/{id}/detail','PelangganController@detail');
-Route::get('/pelanggan/tambah','PelangganController@tambah');
-Route::post('/pelanggan/create','PelangganController@create');
-Route::get('/pelanggan/{id}/edit','PelangganController@edit');
-Route::post('/pelanggan/{id}/update','PelangganController@update');
-Route::get('/pelanggan/{id}/delete','PelangganController@delete');
-Route::get('/pelanggan/cari','PelangganController@cari');
+	// Route::get('/transaksi', 'TransaksiController@transaksi');
+	// Route::get('/transaksi/tambah','TransaksiController@tambah');
+	// Route::post('/transaksi/store','TransaksiController@store');
+	// Route::put('/transaksi/{id}','TransaksiController@update');
+	// Route::get('/transaksi/edit/{id}','TransaksiController@edit');
+	// Route::get('/transaksi/hapus/{id}','TransaksiController@hapus');
+	// Route::get('/transaksi/detail/{id}','TransaksiController@detail');
+	// Route::get('/transaksi/cari','TransaksiController@cari');
 
-// Route::get('/pelanggan', 'PelangganController@pelanggan');
-// Route::get('/pelanggan/tambah','PelangganController@tambah');
-// Route::put('/pelanggan/{id}','PelangganController@update');
-// Route::get('/pelanggan/edit/{id}','PelangganController@edit');
-// Route::post('/pelanggan/store','PelangganController@store');
-// Route::get('/pelanggan/hapus/{id}','PelangganController@hapus');
-// Route::get('/pelanggan/detail/{id}','PelangganController@detail');
-// Route::get('/pelanggan/cari','PelangganController@cari');
+	Route::get('/pelanggan','PelangganController@pelanggan');
+	Route::get('/pelanggan/{id}/detail','PelangganController@detail');
+	Route::get('/pelanggan/tambah','PelangganController@tambah');
+	Route::post('/pelanggan/create','PelangganController@create');
+	Route::get('/pelanggan/{id}/edit','PelangganController@edit');
+	Route::post('/pelanggan/{id}/update','PelangganController@update');
+	Route::get('/pelanggan/{id}/delete','PelangganController@delete');
+	Route::get('/pelanggan/cari','PelangganController@cari');
 
-Route::get('/ps', 'PsController@ps');
-Route::get('/ps/{id}/detail','PsController@detail');
-Route::get('/ps/tambah','PsController@tambah');
-Route::post('/ps/create','PsController@create');
-Route::get('/ps/{id}/edit','PsController@edit');
-Route::post('/ps/{id}/update','PsController@update');
-Route::get('/ps/{id}/delete','PsController@delete');
-Route::get('/ps/cari','PsController@cari');
+	// Route::get('/pelanggan', 'PelangganController@pelanggan');
+	// Route::get('/pelanggan/tambah','PelangganController@tambah');
+	// Route::put('/pelanggan/{id}','PelangganController@update');
+	// Route::get('/pelanggan/edit/{id}','PelangganController@edit');
+	// Route::post('/pelanggan/store','PelangganController@store');
+	// Route::get('/pelanggan/hapus/{id}','PelangganController@hapus');
+	// Route::get('/pelanggan/detail/{id}','PelangganController@detail');
+	// Route::get('/pelanggan/cari','PelangganController@cari');
+
+	Route::get('/ps', 'PsController@ps');
+	Route::get('/ps/{id}/detail','PsController@detail');
+	Route::get('/ps/tambah','PsController@tambah');
+	Route::post('/ps/create','PsController@create');
+	Route::get('/ps/{id}/edit','PsController@edit');
+	Route::post('/ps/{id}/update','PsController@update');
+	Route::get('/ps/{id}/delete','PsController@delete');
+	Route::get('/ps/cari','PsController@cari');
+
+	Route::get('change-password', 'ChangePasswordController@index');
+	Route::post('change-password', 'ChangePasswordController@store')->name('change.password');
+
+	Route::get('/admin', 'HomeController@indexAdmin')->name('admin');
+
+});
 
 // Route::get('/sopir', 'SopirController@sopir');
 // Route::get('/sopir/tambah', 'SopirController@tambah');
@@ -70,15 +79,13 @@ Route::get('/ps/cari','PsController@cari');
 
 Route::get('/', 'DashboardController@dashboard');
 Route::get('/', 'HomeAwalController@homeawal');
-Route::get('/menu', 'HomeAwalController@menu');
-Route::get('/about', 'HomeAwalController@about');
-Route::get('/profile', 'HomeAwalController@profile');
+// Route::get('/menu', 'HomeAwalController@menu');
+// Route::get('/about', 'HomeAwalController@about');
+// Route::get('/profile', 'HomeAwalController@profile');
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('auth/{provider}', 'Auth\AuthController@redirectToProvider');
 Route::get('auth/{provider}/callback', 'Auth\AuthController@handleProviderCallback');
-
-Route::get('/admin', 'HomeController@indexAdmin')->name('admin');
 
 Route::get('admin-login','Auth\AdminLoginController@showLoginForm');
 Route::post('admin-login', ['as' => 'admin-login', 'uses' => 'Auth\AdminLoginController@login']);
@@ -91,6 +98,3 @@ Route::post('admin-register', 'Auth\AdminLoginController@register')->name('admin
 // Route::get('/about', 'HomeAwalController@about');
 // Route::get('/profile', 'HomeAwalController@profile');
 // Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('change-password', 'ChangePasswordController@index');
-Route::post('change-password', 'ChangePasswordController@store')->name('change.password');
